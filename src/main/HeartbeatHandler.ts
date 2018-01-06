@@ -1,4 +1,5 @@
 import * as WebSocket from "ws";
+import { isNull, isNullOrUndefined } from "util";
 
 /**
  * Actively handles the heartbeat ping/pong mechanism respecting the specified parameters
@@ -58,8 +59,13 @@ export class HeartbeatHandler {
         setInterval( () => {
 
             if( !this.alive ) {
+
+                if( !isNullOrUndefined( this.onDeath ) ) {
+                    this.onDeath();
+                }
                 this.websocket.close( -1, this.CLOSURE_MESSAGE );
                 return;
+
             }
 
             this.alive = false;
