@@ -1,9 +1,9 @@
 import * as WebSocket from "ws";
-import { isNull, isNullOrUndefined } from "util";
+import { isNullOrUndefined } from "util";
 import Timer = NodeJS.Timer;
 
 /**
- * Actively handles the heartbeat ping/pong mechanism respecting the specified parameters
+ * Actively handles the heartbeat ping/pong mechanism respecting the specified parameters.
  */
 export class HeartbeatHandler {
 
