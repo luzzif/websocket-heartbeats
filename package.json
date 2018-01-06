@@ -1,8 +1,7 @@
 {
     "name": "websocket-heartbeats",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "A simple websocket-monitoring, heartbeat-based module written in TypeScript",
-    "index": "build/index.js",
     "main": "build/Main.js",
     "scripts": {
         "prepublishOnly": "tsc && cp index.d.ts build",
