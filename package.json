@@ -27,12 +27,10 @@
         "url": "https://github.com/luzzif/websocket-heartbeats/issues"
     },
     "homepage": "https://github.com/luzzif/websocket-heartbeats#readme",
-    "devDependencies": {
+    "dependencies": {
+        "ws": "^4.0.0",
         "@types/node": "^8.5.7",
         "@types/ws": "^3.2.1",
         "typescript": "^2.6.2"
-    },
-    "dependencies": {
-        "ws": "^4.0.0"
     }
 }
