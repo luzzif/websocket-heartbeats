@@ -1,5 +1,6 @@
 import * as WebSocket from "ws";
 import { isNull, isNullOrUndefined } from "util";
+import Timer = NodeJS.Timer;
 
 /**
  * Actively handles the heartbeat ping/pong mechanism respecting the specified parameters
@@ -56,7 +57,7 @@ export class HeartbeatHandler {
      */
     private static handleHeartbeat(): void {
 
-        setInterval( () => {
+        let timer: Timer = setInterval( () => {
 
             if( !this.alive ) {
 
@@ -64,6 +65,7 @@ export class HeartbeatHandler {
                     this.onDeath();
                 }
                 this.websocket.close( -1, this.CLOSURE_MESSAGE );
+                clearInterval( timer );
                 return;
 
             }
