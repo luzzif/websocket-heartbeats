@@ -1,0 +1,38 @@
+{
+    "name": "websocket-heartbeats",
+    "version": "0.0.1",
+    "description": "A simple websocket-monitoring, heartbeat-based module written in TypeScript",
+    "index": "build/index.js",
+    "main": "build/Main.js",
+    "scripts": {
+        "build": "tsc && cp index.d.ts build",
+        "start": "node build/Main.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/luzzif/websocket-heartbeats.git"
+    },
+    "keywords": [
+        "web",
+        "socket",
+        "heart",
+        "beat",
+        "beats",
+        "heartbeat",
+        "websocket"
+    ],
+    "author": "Federico Luzzi <fedeluzzi00@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/luzzif/websocket-heartbeats/issues"
+    },
+    "homepage": "https://github.com/luzzif/websocket-heartbeats#readme",
+    "devDependencies": {
+        "@types/node": "^8.5.7",
+        "@types/ws": "^3.2.1",
+        "typescript": "^2.6.2"
+    },
+    "dependencies": {
+        "ws": "^4.0.0"
+    }
+}

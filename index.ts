@@ -1,0 +1,1 @@
+export { HeartbeatHandler } from "./src/main/HeartbeatHandler";
