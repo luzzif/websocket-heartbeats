@@ -5,6 +5,7 @@
     "index": "build/index.js",
     "main": "build/Main.js",
     "scripts": {
+        "prepublishOnly": "tsc && cp index.d.ts build",
         "build": "tsc && cp index.d.ts build",
         "start": "node build/Main.js"
     },
