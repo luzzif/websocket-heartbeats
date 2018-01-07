@@ -3,7 +3,8 @@ import { isNullOrUndefined } from "util";
 import Timer = NodeJS.Timer;
 
 /**
- * Actively handles the heartbeat ping/pong mechanism respecting the specified parameters.
+ * Actively handles the heartbeat ping/pong mechanism respecting
+ * the specified parameters.
  */
 export class HeartbeatHandler {
 
@@ -23,7 +24,8 @@ export class HeartbeatHandler {
      * @param websocket    The web socket instance on which we want to
      *                     perform the checks and start the monitoring.
      * @param pingInterval The interval between which ping/pong messages
-     *                     are exchanged between client and server.
+     *                     are exchanged between client and server
+     *                     (defaults to 1 minute).
      * @param onDeath      Callback called on client/server connection end,
      *                     detected from missing heartbeat updates.
      */
@@ -55,6 +57,10 @@ export class HeartbeatHandler {
 
     /**
      * Implements the business logic required for the heartbeat detection to work.
+     * If the heartbeat stops respecting the previously-set timeout, the client/server
+     * connection is considered dead and the eventually passed in callback is called.
+     * The web socket is also closed with code 1008 (policy violation) and message
+     * "Heartbeat stopped".
      */
     private static handleHeartbeat(): void {
 
