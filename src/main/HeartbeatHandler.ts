@@ -7,8 +7,9 @@ import Timer = NodeJS.Timer;
  */
 export class HeartbeatHandler {
 
-    private static readonly STATE_OPEN = 1;
-    private static readonly CLOSURE_MESSAGE = "Heartbeat stopped";
+    private static readonly STATE_OPEN: number = 1;
+    private static readonly CLOSURE_MESSAGE: string = "Heartbeat stopped";
+    private static readonly CLOSURE_CODE: number = 1008;
 
     private static websocket: WebSocket;
     private static pingInterval: number;
@@ -64,7 +65,7 @@ export class HeartbeatHandler {
                 if( !isNullOrUndefined( this.onDeath ) ) {
                     this.onDeath();
                 }
-                this.websocket.close( -1, this.CLOSURE_MESSAGE );
+                this.websocket.close( this.CLOSURE_CODE, this.CLOSURE_MESSAGE );
                 clearInterval( timer );
                 return;
 
