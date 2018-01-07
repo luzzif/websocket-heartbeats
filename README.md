@@ -1,13 +1,13 @@
 # Websocket heartbeats
 
-Checks if a websocket's connection to a server is still correctly working, with user-decided responsiveness,
-and eventually runs a callback to notify them.
+Checks if a web socket's connection to a server is still correctly working, with user-decided responsiveness,
+and eventually runs a callback to notify them on lost connection.
 
 ## Installation
 
 The installation step is really straight-forward. Just execute the following command:
 
-```npm install binance-api-client --save```
+```npm install websocket-heartbeats --save```
 
 ## Documentation
 You can find the documentation to this project [here](https://luzzif.github.io/websocket-heartbeats/).
