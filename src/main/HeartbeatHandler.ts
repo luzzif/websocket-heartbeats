@@ -8,14 +8,24 @@ import Timer = NodeJS.Timer;
  */
 export class HeartbeatHandler {
 
-    private static readonly STATE_OPEN: number = 1;
-    private static readonly CLOSURE_MESSAGE: string = "Heartbeat stopped";
-    private static readonly CLOSURE_CODE: number = 1008;
+    private readonly STATE_OPEN: number = 1;
 
-    private static websocket: WebSocket;
-    private static pingInterval: number;
-    private static onDeath: () => any;
-    private static alive: boolean;
+    private websocket: WebSocket;
+    private pingInterval: number;
+    private onDeath: () => any;
+    private alive: boolean;
+
+    constructor(
+        websocket: WebSocket,
+        pingInterval: number,
+        onDeath?: () => any ) {
+
+        this.websocket = websocket;
+        this.pingInterval = pingInterval;
+        this.onDeath = onDeath;
+        this.alive = true;
+
+    }
 
     /**
      * Does some basic checks about the web socket state and starts
@@ -29,15 +39,10 @@ export class HeartbeatHandler {
      * @param onDeath      Callback called on client/server connection end,
      *                     detected from missing heartbeat updates.
      */
-    public static handle(
+    public handle(
         websocket: WebSocket,
         pingInterval: number,
         onDeath?: () => any ): void {
-
-        this.websocket = websocket;
-        this.pingInterval = pingInterval;
-        this.onDeath = onDeath;
-        this.alive = true;
 
         websocket.on( "pong", () => {
             this.alive = true;
@@ -62,7 +67,7 @@ export class HeartbeatHandler {
      * The web socket is also closed with code 1008 (policy violation) and message
      * "Heartbeat stopped".
      */
-    private static handleHeartbeat(): void {
+    private handleHeartbeat(): void {
 
         let timer: Timer = setInterval( () => {
 
@@ -71,7 +76,7 @@ export class HeartbeatHandler {
                 if( !isNullOrUndefined( this.onDeath ) ) {
                     this.onDeath();
                 }
-                this.websocket.close( this.CLOSURE_CODE, this.CLOSURE_MESSAGE );
+                this.websocket.terminate();
                 clearInterval( timer );
                 return;
 
