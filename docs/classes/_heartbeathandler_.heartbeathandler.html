@@ -89,77 +89,105 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_heartbeathandler_.heartbeathandler.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
 						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_heartbeathandler_.heartbeathandler.html#closure_code" class="tsd-kind-icon">CLOSURE_<wbr>CODE</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_heartbeathandler_.heartbeathandler.html#closure_message" class="tsd-kind-icon">CLOSURE_<wbr>MESSAGE</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_heartbeathandler_.heartbeathandler.html#state_open" class="tsd-kind-icon">STATE_<wbr>OPEN</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_heartbeathandler_.heartbeathandler.html#alive" class="tsd-kind-icon">alive</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_heartbeathandler_.heartbeathandler.html#ondeath" class="tsd-kind-icon">on<wbr>Death</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_heartbeathandler_.heartbeathandler.html#pinginterval" class="tsd-kind-icon">ping<wbr>Interval</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_heartbeathandler_.heartbeathandler.html#websocket" class="tsd-kind-icon">websocket</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_heartbeathandler_.heartbeathandler.html#state_open" class="tsd-kind-icon">STATE_<wbr>OPEN</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_heartbeathandler_.heartbeathandler.html#alive" class="tsd-kind-icon">alive</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_heartbeathandler_.heartbeathandler.html#ondeath" class="tsd-kind-icon">on<wbr>Death</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_heartbeathandler_.heartbeathandler.html#pinginterval" class="tsd-kind-icon">ping<wbr>Interval</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_heartbeathandler_.heartbeathandler.html#websocket" class="tsd-kind-icon">websocket</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_heartbeathandler_.heartbeathandler.html#handle" class="tsd-kind-icon">handle</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="_heartbeathandler_.heartbeathandler.html#handleheartbeat" class="tsd-kind-icon">handle<wbr>Heartbeat</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_heartbeathandler_.heartbeathandler.html#handle" class="tsd-kind-icon">handle</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_heartbeathandler_.heartbeathandler.html#handleheartbeat" class="tsd-kind-icon">handle<wbr>Heartbeat</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Heartbeat<wbr>Handler<span class="tsd-signature-symbol">(</span>websocket<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebSocket</span>, pingInterval<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, onDeath<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_heartbeathandler_.heartbeathandler.html" class="tsd-signature-type">HeartbeatHandler</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/0bebd3d/src/main/HeartbeatHandler.ts#L16">HeartbeatHandler.ts:16</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>websocket: <span class="tsd-signature-type">WebSocket</span></h5>
+								</li>
+								<li>
+									<h5>pingInterval: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onDeath: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_heartbeathandler_.heartbeathandler.html" class="tsd-signature-type">HeartbeatHandler</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-					<a name="closure_code" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> CLOSURE_<wbr>CODE</h3>
-					<div class="tsd-signature tsd-kind-icon">CLOSURE_<wbr>CODE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1008</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/7bf999f/src/main/HeartbeatHandler.ts#L13">HeartbeatHandler.ts:13</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-					<a name="closure_message" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> CLOSURE_<wbr>MESSAGE</h3>
-					<div class="tsd-signature tsd-kind-icon">CLOSURE_<wbr>MESSAGE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;Heartbeat stopped&quot;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/7bf999f/src/main/HeartbeatHandler.ts#L12">HeartbeatHandler.ts:12</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="state_open" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> STATE_<wbr>OPEN</h3>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> STATE_<wbr>OPEN</h3>
 					<div class="tsd-signature tsd-kind-icon">STATE_<wbr>OPEN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/7bf999f/src/main/HeartbeatHandler.ts#L11">HeartbeatHandler.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/0bebd3d/src/main/HeartbeatHandler.ts#L11">HeartbeatHandler.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="alive" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> alive</h3>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> alive</h3>
 					<div class="tsd-signature tsd-kind-icon">alive<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/7bf999f/src/main/HeartbeatHandler.ts#L18">HeartbeatHandler.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/0bebd3d/src/main/HeartbeatHandler.ts#L16">HeartbeatHandler.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="ondeath" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> on<wbr>Death</h3>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> on<wbr>Death</h3>
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Death<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/7bf999f/src/main/HeartbeatHandler.ts#L17">HeartbeatHandler.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/0bebd3d/src/main/HeartbeatHandler.ts#L15">HeartbeatHandler.ts:15</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -178,40 +206,40 @@
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="pinginterval" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> ping<wbr>Interval</h3>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> ping<wbr>Interval</h3>
 					<div class="tsd-signature tsd-kind-icon">ping<wbr>Interval<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/7bf999f/src/main/HeartbeatHandler.ts#L16">HeartbeatHandler.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/0bebd3d/src/main/HeartbeatHandler.ts#L14">HeartbeatHandler.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="websocket" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> websocket</h3>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> websocket</h3>
 					<div class="tsd-signature tsd-kind-icon">websocket<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WebSocket</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/7bf999f/src/main/HeartbeatHandler.ts#L15">HeartbeatHandler.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/0bebd3d/src/main/HeartbeatHandler.ts#L13">HeartbeatHandler.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="handle" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> handle</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<h3>handle</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">handle<span class="tsd-signature-symbol">(</span>websocket<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebSocket</span>, pingInterval<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, onDeath<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/7bf999f/src/main/HeartbeatHandler.ts#L32">HeartbeatHandler.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/0bebd3d/src/main/HeartbeatHandler.ts#L42">HeartbeatHandler.ts:42</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -261,17 +289,17 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
 					<a name="handleheartbeat" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> handle<wbr>Heartbeat</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> handle<wbr>Heartbeat</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
 						<li class="tsd-signature tsd-kind-icon">handle<wbr>Heartbeat<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/7bf999f/src/main/HeartbeatHandler.ts#L65">HeartbeatHandler.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/luzzif/websocket-heartbeats/blob/0bebd3d/src/main/HeartbeatHandler.ts#L70">HeartbeatHandler.ts:70</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -307,31 +335,28 @@
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
 						<a href="_heartbeathandler_.heartbeathandler.html" class="tsd-kind-icon">Heartbeat<wbr>Handler</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-								<a href="_heartbeathandler_.heartbeathandler.html#closure_code" class="tsd-kind-icon">CLOSURE_<wbr>CODE</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_heartbeathandler_.heartbeathandler.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-								<a href="_heartbeathandler_.heartbeathandler.html#closure_message" class="tsd-kind-icon">CLOSURE_<wbr>MESSAGE</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_heartbeathandler_.heartbeathandler.html#state_open" class="tsd-kind-icon">STATE_<wbr>OPEN</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_heartbeathandler_.heartbeathandler.html#alive" class="tsd-kind-icon">alive</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_heartbeathandler_.heartbeathandler.html#ondeath" class="tsd-kind-icon">on<wbr>Death</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_heartbeathandler_.heartbeathandler.html#pinginterval" class="tsd-kind-icon">ping<wbr>Interval</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_heartbeathandler_.heartbeathandler.html#websocket" class="tsd-kind-icon">websocket</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_heartbeathandler_.heartbeathandler.html#handle" class="tsd-kind-icon">handle</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="_heartbeathandler_.heartbeathandler.html#handleheartbeat" class="tsd-kind-icon">handle<wbr>Heartbeat</a>
 							</li>
 						</ul>
