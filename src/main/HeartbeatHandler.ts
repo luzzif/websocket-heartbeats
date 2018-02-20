@@ -71,6 +71,16 @@ export class HeartbeatHandler {
 
         let timer: Timer = setInterval( () => {
 
+            if ( this.alive ) {
+                this.alive = false;
+                try {
+                    this.websocket.ping();
+                } catch ( e ) {
+                    // This can occur if the websocket has closed, so lets just catch
+                    // it but keep this.alive = false.
+                }    
+            }
+            
             if( !this.alive ) {
 
                 if( !isNullOrUndefined( this.onDeath ) ) {
@@ -79,11 +89,7 @@ export class HeartbeatHandler {
                 this.websocket.terminate();
                 clearInterval( timer );
                 return;
-
             }
-
-            this.alive = false;
-            this.websocket.ping();
 
         }, this.pingInterval );
 
