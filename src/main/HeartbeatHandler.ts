@@ -1,5 +1,5 @@
 import * as WebSocket from "ws";
-import { isNullOrUndefined } from "util";
+import {isNullOrUndefined} from "util";
 import Timer = NodeJS.Timer;
 
 /**
@@ -9,12 +9,24 @@ import Timer = NodeJS.Timer;
 export class HeartbeatHandler {
 
     private readonly STATE_OPEN: number = 1;
+    private readonly STATE_CLOSED: number = 3;
 
     private websocket: WebSocket;
     private pingInterval: number;
     private onDeath: () => any;
     private alive: boolean;
 
+    /**
+     * Default constructor.
+     *
+     * @param websocket    The web socket instance on which we want to
+     *                     perform the checks and start the monitoring.
+     * @param pingInterval The interval between which ping/pong messages
+     *                     are exchanged between client and server
+     *                     (defaults to 1 minute).
+     * @param onDeath      Callback called on client/server connection end,
+     *                     detected from missing heartbeat updates.
+     */
     constructor(
         websocket: WebSocket,
         pingInterval: number,
@@ -30,27 +42,16 @@ export class HeartbeatHandler {
     /**
      * Does some basic checks about the web socket state and starts
      * the actual heartbeat monitoring.
-     *
-     * @param websocket    The web socket instance on which we want to
-     *                     perform the checks and start the monitoring.
-     * @param pingInterval The interval between which ping/pong messages
-     *                     are exchanged between client and server
-     *                     (defaults to 1 minute).
-     * @param onDeath      Callback called on client/server connection end,
-     *                     detected from missing heartbeat updates.
      */
-    public handle(
-        websocket: WebSocket,
-        pingInterval: number,
-        onDeath?: () => any ): void {
+    public handle(): void {
 
-        websocket.on( "pong", () => {
+        this.websocket.on( "pong", () => {
             this.alive = true;
         } );
 
-        if( websocket.readyState !== this.STATE_OPEN ) {
+        if( this.websocket.readyState !== this.STATE_OPEN ) {
 
-            websocket.on( "open", () => {
+            this.websocket.on( "open", () => {
                 this.handleHeartbeat();
             } );
             return;
@@ -71,6 +72,10 @@ export class HeartbeatHandler {
 
         let timer: Timer = setInterval( () => {
 
+            if( this.websocket.readyState === this.STATE_CLOSED ) {
+                clearInterval( timer );
+                return;
+            }
             if( !this.alive ) {
 
                 if( !isNullOrUndefined( this.onDeath ) ) {
