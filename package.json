@@ -30,7 +30,7 @@
     "dependencies": {
         "@types/node": "^8.9.4",
         "@types/ws": "^3.2.1",
-        "typescript": "^2.7.2",
+        "typescript": "^2.9.2",
         "ws": "^4.1.0"
     }
 }
