@@ -28,7 +28,7 @@
     },
     "homepage": "https://github.com/luzzif/websocket-heartbeats#readme",
     "dependencies": {
-        "@types/node": "^8.10.44",
+        "@types/node": "^8.10.55",
         "@types/ws": "^3.2.1",
         "typescript": "^2.9.2",
         "ws": "^4.1.0"
